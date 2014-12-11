@@ -148,6 +148,7 @@ function getError(code) {
             document.getElementById('error_result').innerHTML = "Invalid Error Code";
         }
     }
+    document.getElementById('user_code').focus();
 };
 
 function getUpdate(code) {
@@ -169,4 +170,5 @@ function getUpdate(code) {
 
             codeCharCount++;        
     }
+    document.getElementById('user_code').focus();
 };

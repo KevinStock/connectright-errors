@@ -8,6 +8,7 @@
 #check {
 	height: 50px;
 	font-variant: small-caps;
+	-webkit-appearance: none;
 }
 
 #update_result,

@@ -1,9 +1,23 @@
 #user_code {
-	height: 50px;
+	height: 44px;
 	font-size: 2em;
+	float: left;
+	margin-right: 5px;
 }
 
 #check {
 	height: 50px;
 	font-variant: small-caps;
+}
+
+#update_result,
+#error_result {
+	margin-top: 10px;
+	font-size: 1.5em;
+}
+
+#error {
+	font-size: 1.5em;
+	color: red;
+	margin-top: 10px;
 }

@@ -294,14 +294,16 @@ var codes = {
 		update_result.style.display = 'none';
 		// if user supplied code is 4 char then it is an error code 
 		if (code.length == 4) {
-			// unhide results
+			// unhide results and hide error if exists
+			document.getElementById('error').innerHTML = '';
 			error_result.style.display = 'block';
 			// get results of error code 
 			getError(code);
 		}
 		// if user supplied code is 6 char then it is an update code 
 		else if (code.length == 6) {
-			// unhide results
+			// unhide results and hide error if exists
+			document.getElementById('error').innerHTML = '';
 			update_result.style.display = 'block';
 			// get results of update code
 			getUpdate(code);
@@ -314,7 +316,7 @@ var codes = {
 })();
 
 /*
-	Compares user supplied error code against ConnectRight Error Codes
+Compares user supplied error code against ConnectRight Error Codes
 */
 function getError(code) {
 	for (var i = 0; i < codes.error_codes.length; i++) {
@@ -334,8 +336,8 @@ function getError(code) {
 }
 
 /*
-	Compares user supplied update code against ConnectRight Update Codes
-	Each Character has a different set of possible errors
+Compares user supplied update code against ConnectRight Update Codes
+Each Character has a different set of possible errors
 */
 function getUpdate(code) {
 	var container = document.getElementById('update_result');
@@ -348,8 +350,16 @@ function getUpdate(code) {
 			// match is found
 			if (object[key][i].key == code[codeCharCount]) {
 				// display result
-				container.innerHTML = container.innerHTML + object[key][i].key + ': ' + object[key][i].value + '<br />';
-				matches++;
+				if (codeCharCount === 0 && object[key][i].key !== 'S') {
+					container.innerHTML = container.innerHTML + '<strong>' + object[key][i].key + ': ' + object[key][i].value + '</strong><br />';
+					matches++;
+				} else if (codeCharCount > 0 && object[key][i].key !== '0') {
+					container.innerHTML = container.innerHTML + '<strong>' + object[key][i].key + ': ' + object[key][i].value + '</strong><br />';
+					matches++;
+				} else {
+					container.innerHTML = container.innerHTML + object[key][i].key + ': ' + object[key][i].value + '<br />';
+					matches++;
+				}
 			}
 		}
 		// if a match was not found it must be an invalid character

@@ -246,88 +246,118 @@
 				}]
 			},
 			"error_codes": [{
-				"code": "E101",
-				"value": "The record is missing city, state and ZIP or has only a city or only a state."
-			}, {
-				"code": "E212",
-				"value": "The city is missing or invalid and ZIP Code is invalid."
-			}, {
-				"code": "E213",
-				"value": "The city/state combination is invalid and the ZIP Code is missing."
-			}, {
-				"code": "E214",
-				"value": "The city and ZIP Code are both invalid."
-			}, {
-				"code": "E216",
-				"value": "The city and state match to more than one possible combination and the ZIP Code is either missing or invalid."
-			}, {
-				"code": "E302",
-				"value": "The primary address is missing or invalid."
-			}, {
-				"code": "E412",
-				"value": "The street name is invalid.  This could be due to an unusual abbreviation, misspelling or extraneous information in the primary address field."
-			}, {
-				"code": "E413",
-				"value": "The street name matches to more than one possible street name and there is not enough additional information in the record to validate the entire address."
-			}, {
-				"code": "E420",
-				"value": "The primary address does not have a recognizable primary number."
-			}, {
-				"code": "E421",
-				"value": "The primary address does not contain a primary number that falls within the ranges available for the street."
-			}, {
-				"code": "E422",
-				"value": "A pre-directional is required to validate the primary address and it is either missing or invalid."
-			}, {
-				"code": "E423",
-				"value": "A suffix (St., Ave., Blvd.) is required to validate the primary address and the suffix is either missing or invalid."
-			}, {
-				"code": "E425",
-				"value": "A directional and suffix (St., Ave., Blvd.) are both required to validate the primary address and both are either missing or invalid."
-			}, {
-				"code": "E427",
-				"value": "A post-directional is required to validate the primary address and it is either missing or invalid."
-			}, {
-				"code": "E428",
-				"value": "The address, city and state match to more than one result but cannot be verified because the ZIP is either missing or invalid."
-			}, {
-				"code": "E429",
-				"value": "The city is either missing or invalid.  The ZIP is valid for more than one city and the address is valid in more than one of those cities."
-			}, {
-				"code": "E430",
-				"value": "The primary address is ambiguous and matches to more than one possible combination of city, state and ZIP."
-			}, {
-				"code": "E431",
-				"value": "Puerto Rican urbanization is required to validate the primary address and it is either missing or invalid."
-			}, {
-				"code": "E439",
-				"value": "Record matches to the USPS EWS (Early Warning System) database and is not yet a deliverable address."
-			}, {
-				"code": "E500",
-				"value": "Record cannot be verified, but cannot receive a more specific error code."
-			}, {
-				"code": "E501",
-				"value": "The address appears to be foreign."
-			}, {
-				"code": "E502",
-				"value": "All of the address fields are blank."
-			}, {
-				"code": "E503",
-				"value": "There is a conflict with the address and it cannot be verified.  This error and address information should be communicated to an application support representative."
-			}, {
-				"code": "E504",
-				"value": "There is a conflict with the address and it cannot be verified.  This error and address information should be communicated to an application support representative."
-			}, {
-				"code": "E505",
-				"value": "A company name or secondary address is required to validate the address and is missing."
-			}, {
-				"code": "E600",
-				"value": "The address was verified, but the USPS does not deliver to the address.  The record receives this error code so that it can be flagged for exclusion when presorting a mailing list."
-			}, {
-				"code": "E601",
-				"value": "The address is not a valid delivery point and a ZIP4 was removed from the record during verification."
-			}]
-		};
+			    "code":"E101",
+			    "value":"The record is missing city, state and ZIP or has only a city or only a state."
+			  },
+			  {
+			    "code":"E212",
+			    "value":"The city is missing or invalid and ZIP Code is invalid."
+			  },
+			  {
+			    "code":"E213",
+			    "value":"The city/state combination is invalid and the ZIP Code is missing."
+			  },
+			  {
+			    "code":"E214",
+			    "value":"The city and ZIP Code are both invalid."
+			  },
+			  {
+			    "code":"E216",
+			    "value":"The city and state match to more than one possible combination and the ZIP Code is either missing or invalid."
+			  },
+			  {
+			    "code":"E302",
+			    "value":"The primary address is missing or invalid."
+			  },
+			  {
+			    "code":"E412",
+			    "value":"The street name is invalid.  This could be due to an unusual abbreviation, misspelling or extraneous information in the primary address field."
+			  },
+			  {
+			    "code":"E413",
+			    "value":"The street name matches to more than one possible street name and there is not enough additional information in the record to validate the entire address."
+			  },
+			  {
+			    "code":"E420",
+			    "value":"The primary address does not have a recognizable primary number."
+			  },
+			  {
+			    "code":"E421",
+			    "value":"The primary address does not contain a primary number that falls within the ranges available for the street."
+			  },
+			  {
+			    "code":"E422",
+			    "value":"A pre-directional is required to validate the primary address and it is either missing or invalid."
+			  },
+			  {
+			    "code":"E423",
+			    "value":"A suffix (St., Ave., Blvd.) is required to validate the primary address and the suffix is either missing or invalid."
+			  },
+			  {
+			    "code":"E425",
+			    "value":"A directional and suffix (St., Ave., Blvd.) are both required to validate the primary address and both are either missing or invalid."
+			  },
+			  {
+			    "code":"E427",
+			    "value":"A post-directional is required to validate the primary address and it is either missing or invalid."
+			  },
+			  {
+			    "code":"E428",
+			    "value":"The address, city and state match to more than one result but cannot be verified because the ZIP is either missing or invalid."
+			  },
+			  {
+			    "code":"E429",
+			    "value":"The city is either missing or invalid.  The ZIP is valid for more than one city and the address is valid in more than one of those cities."
+			  },
+			  {
+			    "code":"E430",
+			    "value":"The primary address is ambiguous and matches to more than one possible combination of city, state and ZIP."
+			  },
+			  {
+			    "code":"E431",
+			    "value":"Puerto Rican urbanization is required to validate the primary address and it is either missing or invalid."
+			  },
+			  {
+			    "code":"E439",
+			    "value":"Record matches to the USPS EWS (Early Warning System) database and is not yet a deliverable address."
+			  },
+			  {
+			    "code":"E500",
+			    "value":"Record cannot be verified, but cannot receive a more specific error code."
+			  },
+			  {
+			    "code":"E501",
+			    "value":"The address appears to be foreign."
+			  },
+			  {
+			    "code":"E502",
+			    "value":"All of the address fields are blank."
+			  },
+			  {
+			    "code":"E503",
+			    "value":"There is a conflict with the address and it cannot be verified.  This error and address information should be communicated to an application support representative."
+			  },
+			  {
+			    "code":"E504",
+			    "value":"The address line matches at least two ZIP+4 records. The ranges of those ZIP+4 records overlap, and the software cannot break the tie. E504 indicates a flaw in the ZIP+4 database. You should report it to your Address Management Systems Office by sending them an e-mail (amssupport.ncsc@usps.gov)."
+			  },
+			  {
+			    "code":"E505",
+			    "value":"A company name or secondary address is required to validate the address and is missing."
+			  },
+			  {
+			    "code":"E600",
+			    "value":"The address was verified, but the USPS does not deliver to the address.  The record receives this error code so that it can be flagged for exclusion when presorting a mailing list."
+			  },
+			  {
+			    "code":"E601",
+			    "value":"The address is not a valid delivery point and a ZIP4 was removed from the record during verification."
+			  },
+			  {
+			    "code":"E800",
+			    "value":"A match to the record was located in the ZIP+4 table but the address was not altered because the application is processing in "
+			  }
+			]};
 
 		(function() {
 			// set focus to input box

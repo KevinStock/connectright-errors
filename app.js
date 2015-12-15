@@ -301,7 +301,7 @@ var codes = {
 	  },
 	  {
 	    "code":"E800",
-	    "value":"A match to the record was located in the ZIP+4 table but the address was not altered because the application is processing in "
+	    "value":"A match to the record was located in the ZIP+4 table but the address was not altered because the application is processing in \"Prevent significant changes to address\" mode."
 	  }
 	]
 };
